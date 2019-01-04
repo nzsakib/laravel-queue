@@ -21,7 +21,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('home', require('./components/ExampleComponent.vue').default);
-Vue.component('queues', require('./components/Queues.vue').default);
+import Queues from './components/Queues';
+Vue.component('queues', Queues);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
